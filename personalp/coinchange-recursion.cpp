@@ -14,11 +14,9 @@ long long int mincoins(int coin[], int n, int v)
 		if(coin[i] <= v)
 		{
 			long long int sub_res = mincoins(coin, n, v-coin[i]);
-			printf("sub_res = %lld\n",sub_res);
 			if(sub_res!=1000000000 && sub_res+1 < res)
 			{
 				res=sub_res+1;
-				printf("res = %lld\n",res);
 			}
 		}
 	}
@@ -43,3 +41,9 @@ int main() {
 	}
 	return 0;
 }
+
+/* INPUT FORMAT 
+
+	1. First line contains the number of coins.
+	2. Second line contains the values of the n coins.
+	3. Third line cotains the value V you want to calculate for.*/
